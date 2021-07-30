@@ -5,7 +5,6 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="/jquery/jquery.js"></script>
 </head>
 
 <body >
@@ -25,11 +24,11 @@
     <div style ="display:flex;">
 
         <div id="player1" style="width: 50%; text-align: center; margin-left: 200px ;">
-            
+            <h1><%= `${name1}` %> </h1>
             <img style="height :200px;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25bd8768-e10c-45cf-955d-c451a5b4516c/d2otcw4-485a4734-c2f1-4a3f-823d-30899040ac49.png/v1/fill/w_900,h_507,q_80,strp/stickman_with_sword_by_stickgod_d2otcw4-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTA3IiwicGF0aCI6IlwvZlwvMjViZDg3NjgtZTEwYy00NWNmLTk1NWQtYzQ1MWE1YjQ1MTZjXC9kMm90Y3c0LTQ4NWE0NzM0LWMyZjEtNGEzZi04MjNkLTMwODk5MDQwYWM0OS5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.czChkdncKfJCy1ylUnR63ebUtekryC3fQhWgzWJeOvQ" alt='' / >
             <br><br><br>
             <form method="post" action="/attack">
-                <button type="submit" name="playerOneAttack" id="playerOneAttack">Attack the ****</button>
+                <button type="submit" name="playerOneAttack" id="playerOneAttack" >Attack the ****</button>
             </form>
             <p>
                 <div class="health-bar" data-total="30" data-value="2"style ="margin-left:230px">
@@ -40,8 +39,24 @@
                 HP: <%=`${player1HP}`%>
             </p> 
         </div>
-
-        <div id="player2" style="width:50%">
+        <div id="testBool" data-test=<%= compBool %>></div>
+         <script>
+            let bool2 = document.getElementById('testBool').dataset.test
+            
+            
+            
+            console.log(`bool2 is ${bool2}`)
+         if (bool2) {
+             setTimeout( () =>{
+                 console.log("Testtestest")
+                document.getElementById('playerTwoAttack').click()
+             }, 3000)
+         }
+         console.log("outside if loop")
+        </script>
+        
+       <div id="player2" style="width:50%; ">
+            <h1> <%= `${name2}` %> </h1>
             <img style="height :200px; transform: scaleX(-1); text-align: center; ; "
                 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25bd8768-e10c-45cf-955d-c451a5b4516c/d2otcw4-485a4734-c2f1-4a3f-823d-30899040ac49.png/v1/fill/w_900,h_507,q_80,strp/stickman_with_sword_by_stickgod_d2otcw4-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTA3IiwicGF0aCI6IlwvZlwvMjViZDg3NjgtZTEwYy00NWNmLTk1NWQtYzQ1MWE1YjQ1MTZjXC9kMm90Y3c0LTQ4NWE0NzM0LWMyZjEtNGEzZi04MjNkLTMwODk5MDQwYWM0OS5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.czChkdncKfJCy1ylUnR63ebUtekryC3fQhWgzWJeOvQ"
                 alt='' /><br><br><br>

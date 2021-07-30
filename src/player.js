@@ -1,6 +1,6 @@
 module.exports = class Player {
 	constructor(name) {
-		this.name = name;
+		this.name = name
 		this.hitpoints = 100;
 		this.damage = 0;
         this.winStatement = ''

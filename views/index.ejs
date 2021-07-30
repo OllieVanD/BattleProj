@@ -7,13 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to the Battle Game!</h1> 
-    <form action='/game'  method='post'> 
+    <h1>Welcome to the Battle Game!</h1>
+    <h1>Multiplayer</h1> 
+     <form action='/game'  method='post'> 
         <p1>Enter Player 1</p1>
         <input id = 'name1' name= 'name1' placeholder='Enter Player 1:'>
         <p1>Enter Player 2</p1>
-        <input id = 'name2' name= 'name2' placeholder='Enter Player 2:'><br>
-        <button id="submit" type="submit">Do battle!</button>
+        <input id = 'name2' name= 'name2' placeholder='Enter Player 2:'><br><br>
+        <button id="submit" type="submit">Do battle!</button><br><br>
+    </form> 
+    <hr class="dotted">
+
+    <h1>Single Player</h1>
+    <form action='/computerGame' method='post'>
+        <p1>Enter Player 1</p1>
+        <input id = 'name1' name= 'name1' placeholder='Enter Player 1:'><br><br>
+        <button type='submit' name='computerSubmit' > Play against Computer</button><br><br>
     </form>
+    
+
+
 </body>
 </html>
